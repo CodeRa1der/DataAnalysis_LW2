@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 import json
+
+
+# Необходимо добавить в программу из лабораторной работы 2.8
+# возможность считывать и создавать файлы JSON
 
 
 def add_route():
@@ -14,6 +19,7 @@ def add_route():
         'second': second,
     }
 
+
 def export_to_json(file, routes_list):
     with open(file, 'w', encoding='utf-8') as fileout:
         json.dump(routes_list, fileout, ensure_ascii=False, indent=4)
@@ -22,6 +28,7 @@ def export_to_json(file, routes_list):
 def import_json(file):
     with open(file, 'r', encoding='utf-8') as filein:
         return json.load(filein)
+
 
 def list_of_routes(roadway):
     if roadway:
